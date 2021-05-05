@@ -1,5 +1,7 @@
 package br.com.zupacademy.luiz.casadocodigo.autor;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,12 @@ public class AutorController {
 	public ResponseEntity<Autor> cadastraAutor(@RequestBody @Valid AutorRequest request) {
 		System.out.println("Autor " + request);
 		Autor autor = request.transformaAutor();
+		Optional<Autor> emailAutor = autorRepository.findByEmail(request.getEmail());
+		
+		if(emailAutor.isPresent()) {
+			return ResponseEntity.badRequest().build();
+		}
+		
 		autorRepository.save(autor);
 		System.out.println("Autor cadastrado!");
 		return ResponseEntity.ok().build();

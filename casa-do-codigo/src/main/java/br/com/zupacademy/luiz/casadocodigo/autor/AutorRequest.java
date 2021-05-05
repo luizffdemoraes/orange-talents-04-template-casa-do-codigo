@@ -1,5 +1,6 @@
 package br.com.zupacademy.luiz.casadocodigo.autor;
 
+import javax.persistence.Column;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
@@ -31,7 +32,11 @@ public class AutorRequest {
 		public String toString() {
 			return "AutorRequest [nome=" + nome + ", email=" + email + ", descricao=" + descricao + "]";
 		}
-		
+
+		public String getEmail() {
+			return email;
+		}
+
 		
 	
 }
