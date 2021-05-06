@@ -1,6 +1,6 @@
 package br.com.zupacademy.luiz.casadocodigo.autor;
 
-import javax.persistence.Column;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
@@ -8,13 +8,16 @@ import org.hibernate.validator.constraints.Length;
 
 public class AutorRequest {
 		
-		@NotBlank @Length(min = 3)
+		@NotBlank
+		@Length(min = 3)
 		private String nome;
 		
-		@NotBlank @Email
+		@NotBlank 
+		@Email
 		private String email;
 		
-		@NotBlank @Length(min = 10, max = 400)
+		@NotBlank 
+		@Length(min = 10, max = 400)
 		private String descricao;
 
 
@@ -25,7 +28,7 @@ public class AutorRequest {
 		}
 
 		public Autor transformaAutor() {
-			return new Autor(this.nome, this.descricao, this.email);
+			return new Autor(this.nome, this.email, this.descricao);
 		}
 
 		@Override
