@@ -6,6 +6,8 @@ import javax.validation.constraints.NotBlank;
 
 import org.hibernate.validator.constraints.Length;
 
+import br.com.zupacademy.luiz.casadocodigo.validacao.UniqueValue;
+
 public class AutorRequest {
 		
 		@NotBlank
@@ -14,6 +16,7 @@ public class AutorRequest {
 		
 		@NotBlank 
 		@Email
+		@UniqueValue(fieldName = "email", targetClass = Autor.class, message = "Já existe um E-mail cadastrado.")
 		private String email;
 		
 		@NotBlank 
