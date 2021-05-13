@@ -34,13 +34,6 @@ public class LivroController {
         return novoLivro.toString();
     }
 	
-//	@GetMapping
-//	public List<LivroResponse> listarLivros(){
-//		List<Livro> livros = (List<Livro>) livroRepository.findAll();
-//		return LivroResponse.converter(livros);
-//		
-//	}
-	
 	@GetMapping
 	public List<LivroResponse> listar () {
 		List<Livro> livros = (List<Livro>) livroRepository.findAll();
