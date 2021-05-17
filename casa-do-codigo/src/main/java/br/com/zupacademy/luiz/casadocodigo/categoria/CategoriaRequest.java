@@ -9,7 +9,7 @@ import br.com.zupacademy.luiz.casadocodigo.validacao.UniqueValue;
 public class CategoriaRequest {
 	
 	@NotBlank @Length(min = 3)
-	@UniqueValue(fieldName = "nome", targetClass = Categoria.class, message = "Nome de categoria já cadastrada.")
+	@UniqueValue(fieldName = "nome", domainClass = Categoria.class, message = "Nome de categoria já cadastrada.")
 	private String nome;
 
 	public String getNome() {

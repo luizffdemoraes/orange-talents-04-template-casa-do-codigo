@@ -1,22 +1,9 @@
 package br.com.zupacademy.luiz.casadocodigo.livro;
 
 import java.math.BigDecimal;
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
-import java.util.stream.Collector;
 import java.util.stream.Collectors;
-
-import javax.persistence.ManyToOne;
-import javax.validation.constraints.Future;
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.Length;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-
 import br.com.zupacademy.luiz.casadocodigo.autor.Autor;
 import br.com.zupacademy.luiz.casadocodigo.categoria.Categoria;
 

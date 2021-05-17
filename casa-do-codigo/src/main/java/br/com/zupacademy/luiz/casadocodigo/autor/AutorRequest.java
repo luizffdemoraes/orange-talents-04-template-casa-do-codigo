@@ -16,7 +16,7 @@ public class AutorRequest {
 		
 		@NotBlank 
 		@Email
-		@UniqueValue(fieldName = "email", targetClass = Autor.class, message = "Já existe um E-mail cadastrado.")
+		@UniqueValue(fieldName = "email", domainClass = Autor.class, message = "Já existe um E-mail cadastrado.")
 		private String email;
 		
 		@NotBlank 

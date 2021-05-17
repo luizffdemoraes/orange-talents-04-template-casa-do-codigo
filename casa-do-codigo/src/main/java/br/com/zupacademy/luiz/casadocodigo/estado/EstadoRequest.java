@@ -11,7 +11,7 @@ import br.com.zupacademy.luiz.casadocodigo.validacao.UniqueValue;
 public class EstadoRequest {
 	
 	@NotBlank 
-	@UniqueValue(fieldName = "nome", targetClass = Estado.class)
+	@UniqueValue(fieldName = "nome", domainClass = Estado.class)
 	private String nome;
 	@NotNull
 	@ExistsValue(fieldName = "id", targetClass = Pais.class)

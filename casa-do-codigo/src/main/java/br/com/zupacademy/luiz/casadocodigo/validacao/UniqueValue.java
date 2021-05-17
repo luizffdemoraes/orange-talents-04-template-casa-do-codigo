@@ -18,6 +18,6 @@ public @interface UniqueValue {
     Class<? extends Payload>[] payload() default {};
     // aqui vem basicamente o que a anotacao vai precisar para validar
     String fieldName();
-    Class<?> targetClass();
-    
+
+    Class<?> domainClass();
 }

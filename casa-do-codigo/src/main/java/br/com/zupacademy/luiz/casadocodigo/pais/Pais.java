@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
+
 @Entity
 public class Pais {
 	
@@ -16,7 +17,6 @@ public class Pais {
 	@NotBlank
 	@Column(unique=true, nullable=false) 
 	private String nome;
-
 	
 	@Deprecated
 	public Pais() {
@@ -41,7 +41,8 @@ public class Pais {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
+	
+	
 	@Override
 	public String toString() {
 		return "Pais [id=" + id + ", nome=" + nome + "]";

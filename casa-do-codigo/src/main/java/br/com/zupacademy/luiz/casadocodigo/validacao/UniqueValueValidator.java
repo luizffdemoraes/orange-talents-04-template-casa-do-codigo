@@ -23,7 +23,7 @@ public class UniqueValueValidator implements ConstraintValidator<UniqueValue, Ob
 	    @Override
 	    public void initialize(UniqueValue params) { // alteracao do nome do argumento para algo que faz mais sentido
 	        targetAttribute = params.fieldName();
-	        klass = params.targetClass();
+	        klass = params.domainClass();
 	    }
 
 	    /*

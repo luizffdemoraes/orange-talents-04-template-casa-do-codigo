@@ -22,7 +22,7 @@ import br.com.zupacademy.luiz.casadocodigo.validacao.UniqueValue;
 public class LivroRequest {
 
 	@NotBlank
-	@UniqueValue(fieldName = "titulo", targetClass = Livro.class, message = "titulo deve ser único")
+	@UniqueValue(fieldName = "titulo", domainClass = Livro.class, message = "titulo deve ser único")
 	private String titulo;
 
 	@NotBlank

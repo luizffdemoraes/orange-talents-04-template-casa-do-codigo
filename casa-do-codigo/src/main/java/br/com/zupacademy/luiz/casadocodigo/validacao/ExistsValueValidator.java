@@ -12,7 +12,7 @@ public class ExistsValueValidator implements ConstraintValidator<ExistsValue, Ob
 
     private String targetAttribute;
     private Class<?> klass;
-    private boolean shoudExist;
+   // private boolean shoudExist;
 
     @PersistenceContext
     private EntityManager manager;
